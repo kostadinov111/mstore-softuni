@@ -5,6 +5,7 @@
 */
 
 @import url('./assets/styles/reset.css');
+@import url('./assets/styles/typography.css');
 
 body {
   background-color: #D6E6F2;
