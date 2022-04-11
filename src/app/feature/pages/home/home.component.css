@@ -54,6 +54,11 @@ h1 {
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
 
+.info__content:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+}
+
 .info__content p {
     padding: 0 2rem;
     font-family: 'Red Hat Display';
@@ -67,6 +72,10 @@ h1 {
 
 .info__content--item {
     width: 550px;
+}
+
+.info__content--item img:hover {
+    filter: brightness(1.1);
 }
 
 .info__img {
