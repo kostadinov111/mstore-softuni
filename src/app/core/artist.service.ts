@@ -9,8 +9,12 @@ export class ArtistService {
 
   constructor(private http: HttpClient) { }
 
-  loadArtistList(): Observable<IArtist[]> {
+  loadArtistList$(): Observable<IArtist[]> {
     return this.http.get<IArtist[]>(`${environment.apiUrl}/artists`);
+  }
+
+  loadArtistById$(id: string): Observable<IArtist> {
+    return this.http.get<IArtist>(`${environment.apiUrl}/artists/${id}`);
   }
 
 }
