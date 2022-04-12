@@ -3,6 +3,6 @@
         {{artist?.name}}
     </li>
     <li class="realy">
-        <button type="button" class="btn">Details</button>
+        <button type="button" class="btn" [routerLink]="['/artists', artist?.id]">Details</button>
     </li>
 </ul>

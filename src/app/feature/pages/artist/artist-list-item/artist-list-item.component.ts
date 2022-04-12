@@ -15,6 +15,7 @@ export class ArtistListItemComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
+    
   }
 
 }
