@@ -1,1 +1,6 @@
-<p>artist-list works!</p>
+<div class="wrapper" *ngIf="artists">
+    <app-artist-list-item *ngFor="let artist of artists" [artist]="artist"></app-artist-list-item>
+</div>
+<div *ngIf="!artists">
+    Loading...
+</div>

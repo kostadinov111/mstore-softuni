@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+.container {
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.container li {
+    width: 300px;
+    font-size: 1.5rem;
+}
+
+.btn {
+    bottom: 5px;
+    right: 5px;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background-color: #769FCD;
+    color: #F7FBFC;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #F7FBFC;
+    color: #769FCD;
+}
