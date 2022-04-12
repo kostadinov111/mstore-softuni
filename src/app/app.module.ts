@@ -1,9 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArtistService } from './core/artist.service';
 import { CoreModule } from './core/core.module';
+import { FeatureModule } from './feature/feature.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,14 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    FeatureModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: ArtistService
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
