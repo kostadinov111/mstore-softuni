@@ -1,6 +1,13 @@
 <div *ngIf="!isLoading">
-    <div>
-        {{artist?.name}}
+    <h2 class="title">{{artist?.name}}</h2>
+    <div class="wrapper">
+        <img src={{artist?.imgUrl}} alt="">
+    </div>
+    <p class="desc">
+        {{artist?.desc}}
+    </p>
+    <div class="back">
+        <button type="button" class="btn" routerLink="/artists">Back</button>
     </div>
 </div>
 <div *ngIf="isLoading">
