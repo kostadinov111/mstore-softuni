@@ -4,6 +4,7 @@ import { AboutComponent } from './feature/pages/about/about.component';
 import { ArtistListItemProfileComponent } from './feature/pages/artist/artist-list-item-profile/artist-list-item-profile.component';
 import { ArtistListComponent } from './feature/pages/artist/artist-list/artist-list.component';
 import { HomeComponent } from './feature/pages/home/home.component';
+import { PageNotFoundComponent } from './feature/pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

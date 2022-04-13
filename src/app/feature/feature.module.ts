@@ -6,6 +6,7 @@ import { ArtistListComponent } from './pages/artist/artist-list/artist-list.comp
 import { ArtistListItemComponent } from './pages/artist/artist-list-item/artist-list-item.component';
 import { RouterModule } from '@angular/router';
 import { ArtistListItemProfileComponent } from './pages/artist/artist-list-item-profile/artist-list-item-profile.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 
@@ -15,7 +16,8 @@ import { ArtistListItemProfileComponent } from './pages/artist/artist-list-item-
     AboutComponent,
     ArtistListComponent,
     ArtistListItemComponent,
-    ArtistListItemProfileComponent
+    ArtistListItemProfileComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
