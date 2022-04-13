@@ -7,6 +7,9 @@ import { ArtistListItemComponent } from './pages/artist/artist-list-item/artist-
 import { RouterModule } from '@angular/router';
 import { ArtistListItemProfileComponent } from './pages/artist/artist-list-item-profile/artist-list-item-profile.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { RockPageComponent } from './pages/rock-page/rock-page.component';
+import { JazzPageComponent } from './pages/jazz-page/jazz-page.component';
+import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component';
 
 
 
@@ -17,7 +20,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ArtistListComponent,
     ArtistListItemComponent,
     ArtistListItemProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RockPageComponent,
+    JazzPageComponent,
+    HipHopPageComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,42 @@
+.content {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 3rem;
+    font-family: 'Red Hat Display';
+    color: #769FCD;
+}
+
+.info__content {
+    margin-top: 3rem;
+    padding: 0 2rem;
+    font-family: 'Red Hat Display';
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #769FCD;
+    margin-bottom: 2rem;
+
+}
+
+.btn {
+    bottom: 5px;
+    right: 5px;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background-color: #769FCD;
+    color: #F7FBFC;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #F7FBFC;
+    color: #769FCD;
+}
+
+.btn__content {
+    margin-bottom: 3rem;
+}
