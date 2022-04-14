@@ -1,0 +1,28 @@
+<form class="login" [formGroup]="loginFormGroup" (ngSubmit)="loginHandler()">
+    <p class="login__input">
+        <label for="username">Username:</label>
+        <input formControlName="username" type="text" name="username" id="username"
+            placeholder="Please enter your username">
+    </p>
+    <ng-container *ngIf="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid">
+        <p class="error">
+            *Username is required
+        </p>
+    </ng-container>
+
+    <p class="login__input">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" name="password" id="password"
+            placeholder="Please enter your password">
+    </p>
+    <ng-container *ngIf="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid">
+        <p *ngIf="loginFormGroup.controls['password'].errors['required']" class="error">
+            *Password is required
+        </p>
+        <p *ngIf="!loginFormGroup.controls['password'].errors['required']" class="error">
+            *Password must be at least 4 characters
+        </p>
+    </ng-container>
+
+    <button [disabled]="loginFormGroup.invalid" (click)="loginHandler()">Login</button>
+</form>

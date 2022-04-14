@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
 import { AboutComponent } from './feature/pages/about/about.component';
 import { ArtistListItemProfileComponent } from './feature/pages/artist/artist-list-item-profile/artist-list-item-profile.component';
 import { ArtistListComponent } from './feature/pages/artist/artist-list/artist-list.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'hip-hop',
     component: HipHopPageComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',
