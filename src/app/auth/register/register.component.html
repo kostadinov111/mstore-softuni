@@ -38,7 +38,7 @@
         <div class="password__container">
             <label for="password">Password: </label>
             <input formControlName="password" type="password" name="password" id="password"
-                placeholder="Enter password" [class.input-error]="passwordsGroup.controls['password'].invalid && passwordsGroup.controls['password'].invalid">
+                placeholder="Enter password" [class.input-error]="passwordsGroup.controls['password'].touched && passwordsGroup.controls['password'].invalid">
             <ng-container 
             *ngIf="passwordsGroup.controls['password'].touched && passwordsGroup.controls['password'].invalid">
                 <p *ngIf="passwordsGroup.controls['password'].errors['required']" class="error">

@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
       'password': this.passwordControl,
       'rePassword': new FormControl(null, [passwordMatch(this.passwordControl)])
     })
-  
+    
   })
   
   constructor(private formBuilder: FormBuilder) { }
