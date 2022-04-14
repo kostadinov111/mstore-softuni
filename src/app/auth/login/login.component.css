@@ -6,3 +6,7 @@
 .input__error {
     border-left: 2px solid red;
 }
+
+.login__error {
+    color:red
+}

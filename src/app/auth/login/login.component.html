@@ -1,4 +1,5 @@
 <form class="login" [formGroup]="loginFormGroup" (ngSubmit)="handleLogin()">
+    <p *ngIf="errorMessage" class="login__error">{{errorMessage}}</p>
     <p class="login__input">
         <label for="email">Email:</label>
         <input formControlName="email" type="text" name="email" id="email"
