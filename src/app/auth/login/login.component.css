@@ -4,9 +4,50 @@
 }
 
 .input__error {
-    border-left: 2px solid red;
+    border-left: 3px solid red;
 }
 
 .login__error {
-    color:red
+    color:red;
+    margin-bottom: 2rem;
 }
+
+#email {
+    margin-left: 32px;
+    margin-bottom: 2rem;
+}
+
+.error-email {
+    margin-top: -28px;
+    margin-left: 12px;
+    margin-bottom: 1rem;
+    color: red;
+    font-size: 14px;
+}
+
+.error-password {
+    margin-top: -28px;
+    margin-left: 38px;
+    margin-bottom: 1rem;
+    color: red;
+    font-size: 14px;
+}
+
+#password {
+    margin-left: 3px;
+    margin-bottom: 2rem;
+}
+
+#btn__login {
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background-color: #769FCD;
+    color: #F7FBFC;
+    border-radius: 6px;
+    cursor: pointer;
+ }
+
+ #btn__login:hover {
+    background-color: #F7FBFC;
+    color: #769FCD;
+ }
