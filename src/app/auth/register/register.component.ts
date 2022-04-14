@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
   }
 
   handleRegister(): void {
-    console.log(this.registerFormGroup.value);
 
     const body = {
       username: this.registerFormGroup.value.username,

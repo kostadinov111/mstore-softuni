@@ -26,15 +26,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginHandler(): void {
-    this.errorMessage = '';
-    this.userService.login$(this.loginFormGroup.value).subscribe({
-      next: () => {
-        this.router.navigate(['/home']);
-      },
-      error: (err) => {
-        this.errorMessage = err.error.message;      
-      }
+  handleLogin() {
+    this.userService.login$(this.loginFormGroup.value).subscribe(() => {
+      this.router.navigate(['home']);
     })
   }
 
