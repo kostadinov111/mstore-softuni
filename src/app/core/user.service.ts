@@ -9,15 +9,19 @@ export class UserService {
 
   currentUser: IUser;
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   login$(userData: {email: string, password: string}): Observable<IUser> {
-    return this.http.post<IUser>(`${environment.apiUrlAuth}/login`, userData, {withCredentials: true})
+    return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/login`, userData, {withCredentials: true})
     .pipe(
       tap(
         user => this.currentUser = user
       )
     )
+  }
+
+  register$(userData: {username: string, email: string, password: string}): Observable<IUser> {
+    return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/register`, userData);
   }
 
 }
