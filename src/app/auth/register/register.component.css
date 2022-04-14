@@ -1,0 +1,24 @@
+.register__form {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.input-error {
+    border-left: 5px solid red;
+}
+
+.error {
+    color: red;
+}
+
+.username__container {
+    margin-bottom: 2rem;
+}
+
+.email__container {
+    margin-bottom: 2rem;
+}
+
+.passwords__container {
+    margin-bottom: 2rem;
+}

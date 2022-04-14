@@ -1,12 +1,12 @@
 <form class="login" [formGroup]="loginFormGroup" (ngSubmit)="loginHandler()">
     <p class="login__input">
-        <label for="username">Username:</label>
-        <input formControlName="username" type="text" name="username" id="username"
-            placeholder="Please enter your username">
+        <label for="email">Email:</label>
+        <input formControlName="email" type="text" name="email" id="email"
+            placeholder="Please enter your email" [class.input__error]="loginFormGroup.controls['email'].touched && loginFormGroup.controls['email'].invalid">
     </p>
-    <ng-container *ngIf="loginFormGroup.controls['username'].touched && loginFormGroup.controls['username'].invalid">
+    <ng-container *ngIf="loginFormGroup.controls['email'].touched && loginFormGroup.controls['email'].invalid">
         <p class="error">
-            *Username is required
+            *Email is required
         </p>
     </ng-container>
 
