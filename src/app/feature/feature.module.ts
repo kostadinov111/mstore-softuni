@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { RockPageComponent } from './pages/rock-page/rock-page.component';
 import { JazzPageComponent } from './pages/jazz-page/jazz-page.component';
 import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component';
+import { EventComponent } from './pages/event/event.component';
 
 
 
@@ -23,7 +24,8 @@ import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component
     PageNotFoundComponent,
     RockPageComponent,
     JazzPageComponent,
-    HipHopPageComponent
+    HipHopPageComponent,
+    EventComponent
   ],
   imports: [
     CommonModule,

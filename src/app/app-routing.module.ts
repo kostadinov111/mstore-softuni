@@ -5,6 +5,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { AboutComponent } from './feature/pages/about/about.component';
 import { ArtistListItemProfileComponent } from './feature/pages/artist/artist-list-item-profile/artist-list-item-profile.component';
 import { ArtistListComponent } from './feature/pages/artist/artist-list/artist-list.component';
+import { EventComponent } from './feature/pages/event/event.component';
 import { HipHopPageComponent } from './feature/pages/hip-hop-page/hip-hop-page.component';
 import { HomeComponent } from './feature/pages/home/home.component';
 import { JazzPageComponent } from './feature/pages/jazz-page/jazz-page.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'events',
+    component: EventComponent
   },
   {
     path: 'rock',
