@@ -34,4 +34,8 @@ export class AuthService {
   handleLogin(newLoggedUser: IUser) {
     this._currentUser.next(newLoggedUser);
   }
+
+  handleLogout() {
+    this._currentUser.next(undefined);
+  }
 }

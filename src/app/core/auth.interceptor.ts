@@ -23,6 +23,8 @@ export class AuthInterceptor implements HttpInterceptor {
         if(httpEvent.url.endsWith('login') || httpEvent.url.endsWith('register')) {
           const newLoggedUser = httpEvent.body;
           this.authService.handleLogin(newLoggedUser as IUser);
+        } else if (httpEvent.url.endsWith('logout')) {
+          this.authService.handleLogout();
         }
       }
     }));

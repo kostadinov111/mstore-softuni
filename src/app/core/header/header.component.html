@@ -6,6 +6,6 @@
         <li *ngIf="!(isLoggedIn$ | async)" class="nav__item"><a routerLink="/register" routerLinkActive="active">Register</a></li>
         <li *ngIf="!(isLoggedIn$ | async)" class="nav__item"><a routerLink="/login" routerLinkActive="active">Login</a></li>
         <li *ngIf="(isLoggedIn$ | async)" class="nav__item"><a routerLink="/events" routerLinkActive="active">Events</a></li>
-        <li *ngIf="(isLoggedIn$ | async)" class="nav__item"><a routerLink="/logout" routerLinkActive="active">Logout</a></li>
+        <li *ngIf="(isLoggedIn$ | async)" class="nav__item"><a href="javascript:void(0)" (click)="handleLogout()" routerLinkActive="active">Logout</a></li>
     </ul>
 </nav>
