@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/auth.service';
 import { IUser } from '../interfaces';
-import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,10 @@ import { UserService } from '../user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  get isLogged(): boolean {
-    return this.userService.isLogged;
-  }
+  currentUser$: Observable<IUser> = this.authService.currentUser$;
+  isLoggedIn$: Observable<boolean> = this.authService.isLoggedIn$;
 
-  get currentUser(): IUser {
-    return this.userService.currentUser;
-  }
-
-  constructor(private userService: UserService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }

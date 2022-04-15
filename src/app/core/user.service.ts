@@ -8,22 +8,22 @@ import { IUser } from './interfaces';
 @Injectable()
 export class UserService {
 
-  currentUser: IUser;
+  // currentUser: IUser;
 
-  get isLogged() {
-    return !!this.currentUser;
-  }
+  // get isLogged() {
+  //   return !!this.currentUser;
+  // }
 
   constructor(private httpClient: HttpClient) { }
 
-  login$(userData: {email: string, password: string}): Observable<IUser> {
-    return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/login`, userData, {withCredentials: true})
-    .pipe(tap(user => this.currentUser = user)
-    );
-  }
+  // login$(userData: {email: string, password: string}): Observable<IUser> {
+  //   return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/login`, userData, {withCredentials: true})
+  //   .pipe(tap(user => this.currentUser = user)
+  //   );
+  // }
 
-  register$(userData: {username: string, email: string, password: string}): Observable<IUser> {
-    return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/register`, userData, { withCredentials: true });
-  }
+  // register$(userData: {username: string, email: string, password: string}): Observable<IUser> {
+  //   return this.httpClient.post<IUser>(`${environment.apiUrlAuth}/register`, userData, { withCredentials: true });
+  // }
 
 }
