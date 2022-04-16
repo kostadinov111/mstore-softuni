@@ -11,6 +11,7 @@ import { RockPageComponent } from './pages/rock-page/rock-page.component';
 import { JazzPageComponent } from './pages/jazz-page/jazz-page.component';
 import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component';
 import { EventComponent } from './pages/event/event.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,8 @@ import { EventComponent } from './pages/event/event.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class FeatureModule { }

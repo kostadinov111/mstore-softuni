@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable, EMPTY } from 'rxjs';
+import { map, tap, catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { IUser } from './core/interfaces';
 
@@ -37,5 +37,12 @@ export class AuthService {
 
   handleLogout() {
     this._currentUser.next(undefined);
+  }
+
+  authenticate(): Observable<IUser> {
+    return this.httpClient.get<IUser>(`${environment.apiUrlAuth}/users/profile`, {withCredentials: true}).pipe(
+      tap(currentProfile => this.handleLogin(currentProfile)), catchError((err) => {
+        return EMPTY;
+      }));
   }
 }

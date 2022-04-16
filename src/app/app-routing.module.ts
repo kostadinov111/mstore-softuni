@@ -37,8 +37,8 @@ const routes: Routes = [
   },
   {
     path: 'events',
-    component: EventComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    component: EventComponent
   },
   {
     path: 'rock',
