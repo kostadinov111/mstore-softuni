@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/auth.service';
 import { IUser } from '../interfaces';
 
@@ -14,12 +14,8 @@ export class HeaderComponent implements OnInit {
   currentUser$: Observable<IUser> = this.authService.currentUser$;
   isLoggedIn$: Observable<boolean> = this.authService.isLoggedIn$;
 
-  message: string;
-  isMessageError: boolean;
-
   private isLoggingOut: boolean = false;
 
-  private subscription: Subscription;
 
   constructor(
     private authService: AuthService,
