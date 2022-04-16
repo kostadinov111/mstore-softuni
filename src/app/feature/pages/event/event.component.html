@@ -1,1 +1,6 @@
-<p>event works!</p>
+<div class="wrapper">
+    <div class="container" *ngFor="let event of events">
+        <span>{{event.location}} - </span>
+        <span>{{event.date}}</span>
+    </div>
+</div>
