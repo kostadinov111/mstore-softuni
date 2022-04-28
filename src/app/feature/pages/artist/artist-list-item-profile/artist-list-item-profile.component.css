@@ -29,6 +29,13 @@
     margin-bottom: 5rem;
 }
 
+.back ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
 .btn {
     padding: 0.3rem 0.5rem;
     border: none;

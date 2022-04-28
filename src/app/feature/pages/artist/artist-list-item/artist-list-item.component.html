@@ -1,8 +1,18 @@
 <ul class="container">
-    <li class="artist">
-        {{artist?.name}}
+    <li>
+        <ul class="artist__desc">
+            <li class="artist__item">
+                {{artist.name}}, formed {{artist.formed}}
+            </li>
+            <li class="artist__btn">
+                <button type="button" class="btn" [routerLink]="['/artists', artist?.id]">Details</button>        
+            </li>
+        </ul>
+    </li>
+    <!-- <li class="artist">
+        {{artist.id}} {{artist?.name}}, formed: {{artist.formed}}
     </li>
     <li class="realy">
         <button type="button" class="btn" [routerLink]="['/artists', artist?.id]">Details</button>
-    </li>
+    </li> -->
 </ul>

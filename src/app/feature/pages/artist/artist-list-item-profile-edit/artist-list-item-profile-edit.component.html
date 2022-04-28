@@ -1,0 +1,17 @@
+<form class="register__form" [formGroup]="" (ngSubmit)="handleEdit()">
+    <!-- username -->
+    <div class="username__container">
+        <label for="username">Username: </label>
+        <input formControlName="username" type="text" id="username" name="username" placeholder="Enter username">
+    </div>
+
+    <!-- email -->
+    <div class="email__container">
+        <label for="email">Email: </label>
+        <input formControlName="email" type="email" name="email" id="email" placeholder="Enter email">
+    </div>
+
+    <button class="btn" [disabled]="">Cancel</button>
+    <button class="btn" [disabled]="">Save</button>
+
+</form>

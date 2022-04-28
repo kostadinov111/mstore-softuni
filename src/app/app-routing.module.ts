@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { AboutComponent } from './feature/pages/about/about.component';
+import { ArtistListItemProfileEditComponent } from './feature/pages/artist/artist-list-item-profile-edit/artist-list-item-profile-edit.component';
 import { ArtistListItemProfileComponent } from './feature/pages/artist/artist-list-item-profile/artist-list-item-profile.component';
 import { ArtistListComponent } from './feature/pages/artist/artist-list/artist-list.component';
 import { EventComponent } from './feature/pages/event/event.component';
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'artists/:id',
     component: ArtistListItemProfileComponent
+  },
+  {
+    path: 'artists/:id/edit',
+    component: ArtistListItemProfileEditComponent
   },
   {
     path: 'about',

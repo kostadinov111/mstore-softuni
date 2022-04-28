@@ -11,9 +11,19 @@
 }
 
 .container li {
-    width: 300px;
+    /* width: 300px; */
     font-size: 1.5rem;
     color: #769FCD;;
+}
+
+.artist__desc {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.artist__item:hover {
+    border-bottom:  3px solid #F7FBFC;
 }
 
 .btn {

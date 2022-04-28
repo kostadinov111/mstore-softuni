@@ -7,7 +7,14 @@
         {{artist?.desc}}
     </p>
     <div class="back">
-        <button type="button" class="btn" routerLink="/artists">Go Back</button>
+        <ul>
+            <li>
+                <button type="button" class="btn" routerLink="/artists">Back</button>
+            </li>
+            <li>
+                <button type="button" class="btn" [routerLink]="['/artists', artist?.id, 'edit']">Edit</button>
+            </li>
+        </ul>
     </div>
 </div>
 <div *ngIf="isLoading">

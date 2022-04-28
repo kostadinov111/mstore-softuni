@@ -10,14 +10,14 @@ export class ArtistService {
   constructor(private http: HttpClient) { }
 
   loadArtistList$(): Observable<IArtist[]> {
-    return this.http.get<IArtist[]>(`${environment.apiUrl}/artists`);
+    return this.http.get<IArtist[]>(`${environment.apiUrl}/artists.json`);
   }
 
   loadArtistById$(id: string): Observable<IArtist> {
-    return this.http.get<IArtist>(`${environment.apiUrl}/artists/${id}`);
+    return this.http.get<IArtist>(`${environment.apiUrl}/artists/${+(id) - 1}.json`);
   }
 
   loadEvents$(): Observable<IEvent[]> {
-    return this.http.get<IEvent[]>(`${environment.apiUrl}/events`);
+    return this.http.get<IEvent[]>(`${environment.apiUrl}/events.json`);
   }
 }

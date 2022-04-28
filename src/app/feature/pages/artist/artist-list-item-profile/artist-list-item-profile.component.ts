@@ -13,7 +13,7 @@ export class ArtistListItemProfileComponent implements OnInit {
 
   artist?: IArtist;
   isLoading: boolean = false;
-  id?: string;
+  id$: string;
 
   constructor(private activatedRoute: ActivatedRoute, private artistService: ArtistService) { }
 
