@@ -45,7 +45,7 @@ export class ArtistListItemProfileEditComponent implements OnInit {
   }
 
   handleEdit(): void {
-    
+
   }
 
 }

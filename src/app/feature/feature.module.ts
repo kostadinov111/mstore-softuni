@@ -11,7 +11,7 @@ import { RockPageComponent } from './pages/rock-page/rock-page.component';
 import { JazzPageComponent } from './pages/jazz-page/jazz-page.component';
 import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component';
 import { EventComponent } from './pages/event/event.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArtistListItemProfileEditComponent } from './pages/artist/artist-list-item-profile-edit/artist-list-item-profile-edit.component';
 
 
@@ -33,7 +33,8 @@ import { ArtistListItemProfileEditComponent } from './pages/artist/artist-list-i
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class FeatureModule { }
