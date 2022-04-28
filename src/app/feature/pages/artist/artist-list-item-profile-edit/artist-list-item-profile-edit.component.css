@@ -1,0 +1,39 @@
+.register__form {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.name__container, .formed__container, .desc__container {
+    margin-top: 2rem;
+}
+
+.artist__name, .artist__formed, .artist__desc {
+    margin-bottom: 1rem;
+}
+
+.desc__container textarea {
+    resize: none;
+}
+
+#name {
+    width: 350px;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background-color: #769FCD;
+    color: #F7FBFC;
+    border-radius: 6px;
+    cursor: pointer;
+ }
+
+ .btn-back {
+     margin-right: 20px;
+ }
+
+ .btn:hover {
+    background-color: #F7FBFC;
+    color: #769FCD;
+ }
