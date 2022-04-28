@@ -1,23 +1,23 @@
-<form class="register__form" #editForm="ngForm">
+<form class="register__form" #editForm="ngForm" (ngSubmit)="updateArtist()">
     <!-- artist name -->
     <div class="name__container">
-        <label for="name">Username: </label>
+        <label for="name">Artist: </label>
         <input ngModel required minlength="2" type="text" id="name" name="name" placeholder="Enter name of artist">
     </div>
 
     <!-- formed -->
     <div class="formed__container">
         <label for="formed">Formed: </label>
-        <input ngModel type="number" name="formed" id="formed" placeholder="Enter year of formation">
+        <input ngModel required min="1900" max="2022" type="number" name="formed" id="formed" placeholder="Enter year of formation">
     </div>
 
         <!-- desc -->
         <div class="desc__container">
             <label for="desc">Description: </label>
-            <input ngModel type="tetx" name="desc" id="desc" placeholder="Enter description">
+            <input ngModel required minlength="10" type="tetx" name="desc" id="desc" placeholder="Enter description">
         </div>
 
-    <button class="btn" [disabled]="">Cancel</button>
-    <button class="btn" [disabled]="">Save</button>
+    <button class="btn" routerLink="/artists">Back to artists</button>
+    <button class="btn" [disabled]="editForm.invalid">Update artist</button>
 
 </form>

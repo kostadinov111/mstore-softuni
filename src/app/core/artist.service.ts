@@ -20,4 +20,12 @@ export class ArtistService {
   loadEvents$(): Observable<IEvent[]> {
     return this.http.get<IEvent[]>(`${environment.apiUrl}/events.json`);
   }
+
+  updateArtist$(id: string, data: any): void {
+    
+    this.http.put(`${environment.apiUrl}/artists/${id}.json`, data).subscribe(response => {
+      // console.log(response);
+      
+    });
+  }
 }

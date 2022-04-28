@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs';
 import { ArtistService } from 'src/app/core/artist.service';
@@ -11,8 +12,11 @@ import { IArtist } from 'src/app/core/interfaces';
 })
 export class ArtistListItemProfileEditComponent implements OnInit {
 
+  @ViewChild('editForm') editForm: NgForm;
+
   artist: IArtist;
   id: number = 0;
+  idParam: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,7 +37,14 @@ export class ArtistListItemProfileEditComponent implements OnInit {
       ).subscribe({
         next: artist => {
           this.artist = artist;
+          this.id = (+(artist.id)) - 1;
+          this.idParam = this.id + '';
           console.log(artist);
+          this.editForm.form.patchValue({
+            name: this.artist.name,
+            formed: this.artist.formed,
+            desc: this.artist.desc
+          });
           
         },
         error: err => {
@@ -44,8 +55,11 @@ export class ArtistListItemProfileEditComponent implements OnInit {
       )
   }
 
-  handleEdit(): void {
-
+  updateArtist(): void {
+    // console.log(this.editForm.value);
+    // console.log(JSON.stringify(this.editForm.value));
+    this.artistService.updateArtist$(this.idParam, JSON.stringify(this.editForm.value));
+    
   }
 
 }
