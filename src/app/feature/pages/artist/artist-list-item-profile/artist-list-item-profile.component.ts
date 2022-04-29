@@ -70,7 +70,7 @@ export class ArtistListItemProfileComponent implements OnInit {
     this.artistService.deleteArtist$(((this.artist.id - 1) + ''));
     setTimeout(() => {
       this.router.navigate(['/artists'])
-    }, 250);
+    }, 50);
   }
 
 }

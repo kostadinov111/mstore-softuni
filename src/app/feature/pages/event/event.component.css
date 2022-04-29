@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
 .wrapper {
     text-align: center;
     margin-top: 5rem;
@@ -5,4 +7,51 @@
 
 .container {
     margin-bottom: 2rem;
+}
+
+.btn {
+    bottom: 5px;
+    right: 5px;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background-color: #769FCD;
+    color: #F7FBFC;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #F7FBFC;
+    color: #769FCD;
+}
+
+label {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.25rem;
+    color: #769FCD;
+}
+
+.event__add {
+    margin-bottom: 2rem;
+}
+
+#location, #date, .btn__cancel {
+    margin-right: 15px;
+}
+
+.event__add__container {
+    position: relative;
+}
+
+.error {
+    font-size: 0.75rem;
+    color: red;
+    position: absolute;
+    top: 24px;
+    left: 89px;
+}
+
+.error__date {
+    top: 24px;
+    left: 54px;
 }

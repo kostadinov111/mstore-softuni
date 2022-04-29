@@ -3,4 +3,43 @@
         <span>{{event.location}} - </span>
         <span>{{event.date}}</span>
     </div>
+    <ng-container *ngIf="isInAddMode">
+        <form class="event__add" #addEvent="ngForm" (ngSubmit)="submitNewEvent(addEvent)">
+            <span class="event__add__container">
+                <!-- location -->
+                <label for="location">Location: </label>
+                <input #eventLocation="ngModel" ngModel required minlength="2" name="location" type="text" id="location"
+                    placeholder="Enter location">
+
+                <!-- error location -->
+                <ng-container *ngIf="eventLocation.touched && eventLocation.invalid">
+                    <span class="error" *ngIf="eventLocation.errors['required']">
+                        *Required
+                    </span>
+                    <span class="error" *ngIf="eventLocation.errors['minlength']">
+                        *Length must be at least 2 symbols
+                    </span>
+                </ng-container>
+            </span>
+
+
+            <span class="event__add__container">
+                <!-- date -->
+                <label for="date">Date: </label>
+                <input #eventDate="ngModel" ngModel required name="date" type="text" id="date" placeholder="Enter date">
+
+                <!-- error date -->
+                <ng-container *ngIf="eventDate.touched && eventDate.invalid">
+                    <p class="error error__date">
+                        *Required
+                    </p>
+                </ng-container>
+            </span>
+
+            <!-- form buttons -->
+            <button type="button" class="btn btn__cancel">Cancel</button>
+            <button [disabled]="addEvent.invalid" class="btn">Save</button>
+        </form>
+    </ng-container>
+    <button type="button" class="btn" (click)="enterAddEventMode()">Add event</button>
 </div>

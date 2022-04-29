@@ -14,7 +14,6 @@ import { EventComponent } from './pages/event/event.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
