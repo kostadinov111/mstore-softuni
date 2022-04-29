@@ -49,3 +49,31 @@
     background-color: #F7FBFC;
     color: #769FCD;
  }
+
+
+ /* CSS styles in Edit Mode */
+
+ .edit__form {
+     margin-top: 3rem;
+     text-align: center;
+ }
+
+ .desc__container {
+     margin-bottom: 2rem;
+ }
+
+ label {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: center;
+    color: #769FCD;
+    font-size: 1.3rem;
+}
+
+#name, #formed, #desc {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#btn__cancel {
+    margin-right: 5px;
+}

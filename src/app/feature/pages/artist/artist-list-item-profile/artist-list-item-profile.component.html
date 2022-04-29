@@ -18,7 +18,7 @@
     </div>
 </div>
 <div *ngIf="!isLoading && isInEditMode">
-    <form class="register__form" #editForm="ngForm" (ngSubmit)="updateArtist()">
+    <form class="edit__form" #editForm="ngForm" (ngSubmit)="updateArtist()">
         <!-- artist name -->
         <div class="name__container">
             <div class="artist__name">
@@ -43,7 +43,7 @@
                 <textarea ngModel required minlength="10" type="text" rows="30" cols="100" name="desc" id="desc" placeholder="Enter description"></textarea>
             </div>
     
-        <button (click)="isInEditMode = false" type="button" class="btn btn-back">Cancel</button>
+        <button (click)="isInEditMode = false" type="button" class="btn btn-back" id="btn__cancel">Cancel</button>
         <button  [disabled]="editForm.invalid" class="btn" [disabled]="editForm.invalid">Save</button>
     </form>
 </div>
