@@ -34,6 +34,9 @@ export class EventComponent implements OnInit {
     // console.log(addEvent.value);
     addEvent.value['id'] = this.events.length;
     this.artistService.addEvent$(this.events.length, JSON.stringify(addEvent.value));
+    setTimeout(() => {
+      this.ngOnInit();
+    }, 50)
     this.handleCancel();
   }
 
