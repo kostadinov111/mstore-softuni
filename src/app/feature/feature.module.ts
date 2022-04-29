@@ -12,7 +12,6 @@ import { JazzPageComponent } from './pages/jazz-page/jazz-page.component';
 import { HipHopPageComponent } from './pages/hip-hop-page/hip-hop-page.component';
 import { EventComponent } from './pages/event/event.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ArtistListItemProfileEditComponent } from './pages/artist/artist-list-item-profile-edit/artist-list-item-profile-edit.component';
 
 
 
@@ -28,7 +27,6 @@ import { ArtistListItemProfileEditComponent } from './pages/artist/artist-list-i
     JazzPageComponent,
     HipHopPageComponent,
     EventComponent,
-    ArtistListItemProfileEditComponent
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,4 @@
-<div *ngIf="!isLoading">
+<div *ngIf="!isLoading && !isInEditMode">
     <h2 class="title">{{artist?.name}}</h2>
     <div class="wrapper">
         <img src={{artist?.imgUrl}} alt="">
@@ -12,10 +12,41 @@
                 <button type="button" class="btn" routerLink="/artists">Back</button>
             </li>
             <li>
-                <button type="button" class="btn" [routerLink]="['/artists', artist?.id, 'edit']">Edit</button>
+                <!-- <button (click)="isInEditMode = true" type="button" class="btn" [routerLink]="['/artists', artist?.id, 'edit']">Edit</button> -->
+                <button (click)="enterEditMode()" type="button" class="btn">Edit</button>
             </li>
         </ul>
     </div>
+</div>
+<div *ngIf="!isLoading && isInEditMode">
+    <form class="register__form" #editForm="ngForm" (ngSubmit)="updateArtist()">
+        <!-- artist name -->
+        <div class="name__container">
+            <div class="artist__name">
+                <label for="name">Artist: </label>
+            </div>
+            <input ngModel required minlength="2" type="text" id="name" name="name" placeholder="Enter name of artist" value="{{artist.name}}">
+        </div>
+    
+        <!-- formed -->
+        <div class="formed__container">
+            <div class="artist__formed">
+                <label for="formed">Formed: </label>
+            </div>
+            <input ngModel required min="1900" max="2022" type="number" name="formed" id="formed" placeholder="Enter year of formation">
+        </div>
+    
+            <!-- desc -->
+            <div class="desc__container">
+                <div class="artist__desc">
+                    <label for="desc">Description: </label>
+                </div>
+                <textarea ngModel required minlength="10" type="text" rows="30" cols="100" name="desc" id="desc" placeholder="Enter description"></textarea>
+            </div>
+    
+        <button (click)="isInEditMode = false" type="button" class="btn btn-back">Back to artists</button>
+        <button  [disabled]="editForm.invalid" class="btn" [disabled]="editForm.invalid">Update artist</button>
+    </form>
 </div>
 <div *ngIf="isLoading">
     Loading...

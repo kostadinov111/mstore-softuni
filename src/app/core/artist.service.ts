@@ -23,9 +23,8 @@ export class ArtistService {
 
   updateArtist$(id: string, data: any): void {
     
-    this.http.put(`${environment.apiUrl}/artists/${id}.json`, data).subscribe(response => {
+    this.http.patch(`${environment.apiUrl}/artists/${id}.json`, data).subscribe(response => {
       // console.log(response);
-      
     });
   }
 }

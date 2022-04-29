@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs';
 import { ArtistService } from 'src/app/core/artist.service';
@@ -11,9 +12,11 @@ import { IArtist } from 'src/app/core/interfaces';
 })
 export class ArtistListItemProfileComponent implements OnInit {
 
+  @ViewChild('editForm') editForm: NgForm;
+
   artist?: IArtist;
   isLoading: boolean = false;
-  id$: string;
+  isInEditMode: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private artistService: ArtistService) { }
 
@@ -29,6 +32,8 @@ export class ArtistListItemProfileComponent implements OnInit {
       ).subscribe({
         next: artist => {
           this.artist = artist;
+          console.log(this.artist);
+          
           this.isLoading = false;
         },
         error: err => {
@@ -37,6 +42,26 @@ export class ArtistListItemProfileComponent implements OnInit {
           
         }
       })
-
   }
+
+  enterEditMode(): void {
+    this.isInEditMode = true;
+    setTimeout(() => {
+      this.editForm.form.patchValue({
+        name: this.artist.name,
+        formed: this.artist.formed,
+        desc: this.artist.desc,
+        imgUrl: this.artist.imgUrl
+      })
+    });
+  }
+
+  updateArtist(): void {
+    console.log(this.editForm.value);
+    this.artistService.updateArtist$(((this.artist.id - 1) + ''), JSON.stringify(this.editForm.value))
+    this.isInEditMode = false;
+    
+    
+  }
+
 }
