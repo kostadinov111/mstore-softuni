@@ -37,7 +37,7 @@
             </span>
 
             <!-- form buttons -->
-            <button type="button" class="btn btn__cancel">Cancel</button>
+            <button (click)="handleCancel()" type="button" class="btn btn__cancel">Cancel</button>
             <button [disabled]="addEvent.invalid" class="btn">Save</button>
         </form>
     </ng-container>

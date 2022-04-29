@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ArtistService } from 'src/app/core/artist.service';
 import { IEvent } from 'src/app/core/interfaces';
 
@@ -14,7 +15,8 @@ export class EventComponent implements OnInit {
   isInAddMode: boolean = false;
 
   constructor(
-    private artistService: ArtistService
+    private artistService: ArtistService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,10 @@ export class EventComponent implements OnInit {
   submitNewEvent(addEvent: NgForm): void {
     console.log(addEvent.value);
     
+  }
+
+  handleCancel(): void {
+    this.isInAddMode = false;
   }
 
 }
