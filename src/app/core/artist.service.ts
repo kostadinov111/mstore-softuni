@@ -31,4 +31,8 @@ export class ArtistService {
   deleteArtist$(id: string): void {
     this.http.delete(`${environment.apiUrl}/artists/${id}.json`).subscribe();
   }
+
+  addEvent$(length: number, body: any): void {
+    this.http.put<IEvent>(`${environment.apiUrl}/events/${length}.json`, body).subscribe();
+  }
 }

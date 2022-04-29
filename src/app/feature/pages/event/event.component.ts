@@ -31,8 +31,10 @@ export class EventComponent implements OnInit {
   }
 
   submitNewEvent(addEvent: NgForm): void {
-    console.log(addEvent.value);
-    
+    // console.log(addEvent.value);
+    addEvent.value['id'] = this.events.length;
+    this.artistService.addEvent$(this.events.length, JSON.stringify(addEvent.value));
+    this.handleCancel();
   }
 
   handleCancel(): void {
