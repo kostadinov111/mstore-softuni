@@ -27,4 +27,8 @@ export class ArtistService {
       // console.log(response);
     });
   }
+
+  deleteArtist$(id: string): void {
+    this.http.delete(`${environment.apiUrl}/artists/${id}.json`).subscribe();
+  }
 }
