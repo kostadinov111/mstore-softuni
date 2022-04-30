@@ -62,8 +62,12 @@ export class ArtistListItemProfileComponent implements OnInit {
 
   updateArtist(): void {
     console.log(this.editForm.value);
-    this.artistService.updateArtist$(((this.artist.id - 1) + ''), JSON.stringify(this.editForm.value))
-    this.isInEditMode = false;
+    this.artistService.updateArtist$(((this.artist.id - 1) + ''), JSON.stringify(this.editForm.value));
+    setTimeout(() => {
+      this.ngOnInit();
+      this.isInEditMode = false;
+    }, 50);
+    
   }
 
   deleteArtist(): void {
