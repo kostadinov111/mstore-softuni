@@ -16,6 +16,8 @@ export class ArtistListComponent implements OnInit {
   ngOnInit(): void {
     this.artistService.loadArtistList$().subscribe(artists => {
       this.artists = artists;
+      console.log(artists);
+      
     })
   }
 
