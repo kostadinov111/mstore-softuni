@@ -36,8 +36,7 @@ export class ArtistListItemProfileComponent implements OnInit {
       ).subscribe({
         next: artist => {
           this.artist = artist;
-          console.log(this.artist);
-          
+          // console.log(this.artist);
           this.isLoading = false;
         },
         error: err => {

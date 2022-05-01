@@ -15,9 +15,13 @@ export class ArtistListComponent implements OnInit {
 
   ngOnInit(): void {
     this.artistService.loadArtistList$().subscribe(artists => {
-      this.artists = artists;
-      console.log(artists);
-      
+      artists.forEach(item => {
+        if(item !== null) {
+          this.artists.push(item)
+        }
+      });
+      // console.log(this.artists);      
+      // this.artists = artists;
     })
   }
 
